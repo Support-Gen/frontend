@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import AppLayout from '../components/layout/app-layout'
-import DashboardFeature from '../feature/dashboard/dashboard'
+import DashboardComponent from '../feature/dashboard/dashboard'
 
 const Dashboard: NextPage = () => {
   return (
     <AppLayout>
-      <DashboardFeature></DashboardFeature>
+      <DashboardComponent></DashboardComponent>
     </AppLayout>
   )
 }

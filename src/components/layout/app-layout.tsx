@@ -2,6 +2,7 @@ import {
   AppShell,
   Avatar,
   Burger,
+  Container,
   createStyles,
   Group,
   Header,
@@ -102,8 +103,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const data = [
-  { link: "/", label: "Dashboard", icon: MdOutlineDashboard },
-  { link: "/projects", label: "Projects", icon: CgNotes },
+  { link: "/", label: "Overview", icon: MdOutlineDashboard },
 ];
 
 const AppLayout = ({ children }: any) => {
@@ -112,7 +112,7 @@ const AppLayout = ({ children }: any) => {
   const currentFeatureLabel =
     data.find((navItem) =>
       navItem.link != "/" ? router.asPath.includes(navItem.link) : false
-    )?.label ?? "Dashboard";
+    )?.label ?? "Overview";
   const [active, setActive] = useState(currentFeatureLabel);
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
@@ -193,7 +193,9 @@ const AppLayout = ({ children }: any) => {
         </MediaQuery>
       }
     >
-      {children}
+      <Container size={'xl'} pt={'lg'}>
+        {children}
+      </Container>
     </AppShell>
   );
 };
