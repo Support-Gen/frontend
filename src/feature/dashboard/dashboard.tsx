@@ -9,6 +9,7 @@ import {
   Button,
   TextInput,
   UnstyledButton,
+  Box,
 } from "@mantine/core";
 import { BiSearch } from "react-icons/bi";
 import { MdOutlineAdd } from "react-icons/md";
@@ -23,17 +24,18 @@ const DashboardComponent = () => {
           2
         </Badge>
       </Group>
-      <Grid justify={"space-between"} mb={"lg"}>
-        <Grid.Col span={6}>
+      <Group position={'apart'} mb={"lg"}>
+        <Box sx={{ width: '50%', minWidth: 250 }}>
           <TextInput
+            type={'search'}
             placeholder="Search projects..."
             icon={<BiSearch size={17} />}
           />
-        </Grid.Col>
-        <Grid.Col span={2}>
+        </Box>
+        <Box>
           <Button leftIcon={<MdOutlineAdd size={18} />}>Add project</Button>
-        </Grid.Col>
-      </Grid>
+        </Box>
+      </Group>
       <Grid>
         <Grid.Col span={3}>
           <UnstyledButton sx={{width: '100%'}} >
