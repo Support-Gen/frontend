@@ -8,6 +8,7 @@ import {
   Header,
   MediaQuery,
   Navbar,
+  Title,
   useMantineTheme,
 } from "@mantine/core";
 import { useState } from "react";
@@ -103,7 +104,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const data = [
-  { link: "/", label: "Overview", icon: MdOutlineDashboard },
+  { link: "/", label: "Projects", icon: MdOutlineDashboard, docsModule: 'projects' },
 ];
 
 const AppLayout = ({ children }: any) => {
@@ -112,7 +113,7 @@ const AppLayout = ({ children }: any) => {
   const currentFeatureLabel =
     data.find((navItem) =>
       navItem.link != "/" ? router.asPath.includes(navItem.link) : false
-    )?.label ?? "Overview";
+    )?.label ?? "Projects";
   const [active, setActive] = useState(currentFeatureLabel);
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
@@ -125,6 +126,7 @@ const AppLayout = ({ children }: any) => {
       })}
       href={item.link}
       key={item.label}
+      flowy-module-target={item.docsModule}
     >
       <item.icon size={19} className={classes.linkIcon} />
       <span>{item.label}</span>
@@ -152,7 +154,7 @@ const AppLayout = ({ children }: any) => {
         >
           <Navbar.Section grow>
             <Group className={classes.header} position="apart">
-              tbdname
+              <Title order={4} sx={{ color: theme.colors.indigo[8]}}>flowydocs</Title>
             </Group>
             {links}
           </Navbar.Section>
