@@ -56,7 +56,7 @@ const ProjectComponent = () => {
         <Modal
           opened={opened}
           onClose={() => setOpened(false)}
-          size={'lg'}
+          size={'xl'}
           title={
             <Title order={2}>Add Project</Title>
           }
