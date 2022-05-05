@@ -45,7 +45,7 @@ const ProjectComponent = () => {
         <Grid>
           <Grid.Col span={3}>
             <a style={{width: '100%'}} href="/project/test">
-              <Paper withBorder shadow={"md"} p={20} radius={"md"}>
+              <Paper withBorder shadow={"sm"} p={20} radius={"md"}>
                 <Title order={3}>TherapyApp</Title>
                 <Text mb={"md"}>therapyapp.flowydocs.com</Text>
                 <Text size={"sm"}>Updated 10d ago</Text>
