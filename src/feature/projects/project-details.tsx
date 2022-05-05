@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Group, Paper, SimpleGrid, Title, Text, createStyles, Badge, Tabs, UnstyledButton, Anchor } from "@mantine/core";
+import { Box, Button, Grid, Group, Paper, SimpleGrid, Title, Text, createStyles, Badge, Tabs, UnstyledButton, Anchor, Input } from "@mantine/core";
 import Link from "next/link";
 import { MdArrowBack, MdOutlineRepeat } from "react-icons/md";
 import { IoMdPaperPlane } from "react-icons/io";
@@ -73,7 +73,20 @@ const ProjectDetailsComponent = () => {
             </Grid>
           </Paper>
         </Tabs.Tab>
-        <Tabs.Tab label="Settings"></Tabs.Tab>
+        <Tabs.Tab label="Settings">
+          <Title order={2} mb={'xl'}>Documentation Settings</Title>
+          <Tabs variant={'pills'} orientation={'vertical'} color={'dark'}>
+            <Tabs.Tab label="General">
+              <Paper withBorder={true} radius={'sm'} p={'md'}>
+                <Title order={3} mb={'sm'}>Project Name</Title>
+                <Input variant="default" placeholder="Name" />
+              </Paper>
+            </Tabs.Tab>
+            <Tabs.Tab label="Domains">
+
+            </Tabs.Tab>
+          </Tabs>
+        </Tabs.Tab>
       </Tabs>
     </section>
   );

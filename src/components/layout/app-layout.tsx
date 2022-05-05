@@ -195,7 +195,7 @@ const AppLayout = ({ children }: any) => {
         </MediaQuery>
       }
     >
-      <Container size={'xl'} pt={'lg'}>
+      <Container size={'lg'} pt={'lg'}>
         {children}
       </Container>
     </AppShell>
