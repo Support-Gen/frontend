@@ -1,31 +1,17 @@
 import {
   Box,
-  Button,
   Collapse,
   Group,
-  Paper,
-  SimpleGrid,
-  Title,
   Text,
   createStyles,
-  Badge,
-  Tabs,
-  UnstyledButton,
-  Anchor,
-  Input,
   useMantineTheme,
   Container,
-  Header,
-  Burger,
   Navbar,
   AppShell,
-  Avatar,
   ActionIcon,
 } from "@mantine/core";
 import Link from "next/link";
-import { MdArrowBack, MdAdd, MdOutlineTextFields, MdInfoOutline, MdOutlineDashboard } from "react-icons/md";
-import { AiOutlineAppstore } from "react-icons/ai";
-import { HiOutlineGlobeAlt } from "react-icons/hi";
+import { MdAdd, MdOutlineSettings, MdOutlineDashboard } from "react-icons/md";
 import { FiBox } from "react-icons/fi";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { useListState } from "@mantine/hooks";
@@ -138,24 +124,25 @@ const useStyles = createStyles((theme, _params, getRef) => {
   };
 });
 
-const data = [
-  { link: "/project/test", label: "Overview", icon: MdOutlineDashboard },
-];
+// const data = [
+//   { link: "/project/test", label: "Overview", icon: MdOutlineDashboard },
+//   { link: "/project/test/settings", label: "Settings", icon: MdOutlineSettings },
+// ];
 
 const ProjectLayout = ({ children, header }: any) => {
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
 
-  const links = data.map((item) => (
-    <a
-      className={cx(classes.link)}
-      href={item.link}
-      key={item.label}
-    >
-      <item.icon size={19} className={classes.linkIcon} />
-      <span>{item.label}</span>
-    </a>
-  ));
+  // const links = data.map((item) => (
+  //   <a
+  //     className={cx(classes.link)}
+  //     href={item.link}
+  //     key={item.label}
+  //   >
+  //     <item.icon size={19} className={classes.linkIcon} />
+  //     <span>{item.label}</span>
+  //   </a>
+  // ));
 
   return (
     <AppShell
@@ -170,9 +157,9 @@ const ProjectLayout = ({ children, header }: any) => {
       header={ header }
       navbar={
         <Navbar width={{ xs: 250, sm: 300 }} p="md">
-          <Navbar.Section>
+          {/* <Navbar.Section>
             { links }
-          </Navbar.Section>
+          </Navbar.Section> */}
           <Navbar.Section grow>
             <Group position={"apart"} mb={"sm"}>
               <Text size={"sm"} transform={"uppercase"} weight={600}>

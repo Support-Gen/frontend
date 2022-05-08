@@ -1,10 +1,7 @@
-import { Header, UnstyledButton, Group } from "@mantine/core";
 import type { GetServerSideProps, NextPage } from "next";
 import { resetServerContext } from "react-beautiful-dnd";
 import ProjectLayout from "../../../components/layout/project-layout";
-import Link from "next/link";
-import { MdArrowBack } from "react-icons/md";
-import OverviewProjectComponent from "../../../feature/projects/overview";
+import ProjectSettingsComponent from "../../../feature/projects/settings";
 import { ProjectDefaultHeader } from "../../../components/headers/project-default-header";
 
 const Project: NextPage = () => {
@@ -12,7 +9,7 @@ const Project: NextPage = () => {
     <ProjectLayout
       header={<ProjectDefaultHeader></ProjectDefaultHeader>}
     >
-      <OverviewProjectComponent></OverviewProjectComponent>
+      <ProjectSettingsComponent></ProjectSettingsComponent>
     </ProjectLayout>
   );
 };
