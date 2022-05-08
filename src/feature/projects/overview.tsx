@@ -13,12 +13,12 @@ const useStyles = createStyles((theme, _params, getRef) => {
   };
 });
 
-const EditProjectComponent = () => {
+const OverviewProjectComponent = () => {
   return (
     <Box>
-
+      test
     </Box>
   );
 };
 
-export default EditProjectComponent;
+export default OverviewProjectComponent;

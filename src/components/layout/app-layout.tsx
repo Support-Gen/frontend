@@ -126,7 +126,6 @@ const AppLayout = ({ children }: any) => {
       })}
       href={item.link}
       key={item.label}
-      flowy-module-target={item.docsModule}
     >
       <item.icon size={19} className={classes.linkIcon} />
       <span>{item.label}</span>
