@@ -23,7 +23,8 @@ import {
   ActionIcon,
 } from "@mantine/core";
 import Link from "next/link";
-import { MdArrowBack, MdAdd, MdFolder } from "react-icons/md";
+import { MdArrowBack, MdAdd, MdOutlineTextFields, MdInfoOutline } from "react-icons/md";
+import { AiOutlineAppstore } from "react-icons/ai";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { FiBox } from "react-icons/fi";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
@@ -32,6 +33,10 @@ import { useState } from "react";
 
 const useStyles = createStyles((theme, _params, getRef) => {
   return {
+    label: {
+      fontSize: 46, 
+      fontWeight: 800
+    },
     headerRow: {
       height: "100%",
     },
@@ -100,6 +105,28 @@ const EditProjectComponent = () => {
               </UnstyledButton>
             </Link>
             <Box>
+              <Group grow>
+                <UnstyledButton>
+                  <Group direction={'column'} spacing={0} align={'center'}>
+                    <MdOutlineTextFields size={20}></MdOutlineTextFields>
+                    <Text size={'xs'}>Text</Text>
+                  </Group>
+                </UnstyledButton>
+                <UnstyledButton>
+                  <Group direction={'column'} spacing={0} align={'center'}>
+                    <MdInfoOutline size={20}></MdInfoOutline>
+                    <Text size={'xs'}>Info</Text>
+                  </Group>
+                </UnstyledButton>
+                <UnstyledButton>
+                  <Group direction={'column'} spacing={0} align={'center'}>
+                    <AiOutlineAppstore size={20} color={'gray'}></AiOutlineAppstore>
+                    <Text size={'xs'} color={'gray'}>App</Text>
+                  </Group>
+                </UnstyledButton>
+              </Group>
+            </Box>
+            <Box>
               <Group>
                 <Button leftIcon={<HiOutlineGlobeAlt></HiOutlineGlobeAlt>}>
                   Publish
@@ -134,7 +161,9 @@ const EditProjectComponent = () => {
         </Navbar>
       }
     >
-      <Container size={"xl"} pt={"lg"}></Container>
+      <Container size={"xl"} pt={"lg"}>
+        <Title className={classes.label}>Search patients</Title>
+      </Container>
     </AppShell>
   );
 };
